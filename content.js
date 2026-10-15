@@ -17,7 +17,7 @@ window.SITE = {
     { data: "15/10/2026", titulo: "Esqueleto do jogo em construção", texto: "A base do projeto está pronta: movimento, câmera e estrutura das fases." }
   ],
   galeria: [
-    { img: "assets/knight.svg", legenda: "O Portador do Juramento" },
+    { img: "assets/perfil.png", legenda: "O Portador do Juramento" },
     { img: "assets/ruins.svg", legenda: "Ruínas de Ashem" },
     { img: "assets/sword.svg", legenda: "A lâmina quebrada" }
   ],
