@@ -16,10 +16,10 @@ window.SITE = {
     { data: "15/10/2026", titulo: "O site de Ashem Vow está no ar", texto: "Este é o ponto central para acompanhar o desenvolvimento, ver a arte e apoiar o projeto." },
     { data: "15/10/2026", titulo: "Esqueleto do jogo em construção", texto: "A base do projeto está pronta: movimento, câmera e estrutura das fases." }
   ],
-  galeria: [
-    { img: "assets/perfil.png", legenda: "O Portador do Juramento" },
-    { img: "assets/ruins.svg", legenda: "Ruínas de Ashem" },
-    { img: "assets/sword.svg", legenda: "A lâmina quebrada" }
+  GUS: [
+    { img: "assets/skinpadrao.png", legenda: "Juramento Carmesim" },
+    { img: "assets/skin2.png", legenda: "Voto das Sombras" },
+    { img: "assets/skin3.png", legenda: "Herdeiro da Ruína" }
   ],
   criador: {
     nome: "Teecki",
