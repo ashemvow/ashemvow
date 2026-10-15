@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ashem Vow · game 2D dark fantasy</title>
+<meta name="description" content="Ashem Vow, game 2D dark fantasy em desenvolvimento por Teecki. Acompanhe as novidades e apoie o projeto.">
+<meta property="og:title" content="Ashem Vow"><meta property="og:description" content="Um juramento forjado em cinzas.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="embers" aria-hidden="true"></canvas>
+<header class="nav">
+  <a class="logo" href="#topo">Ashem Vow</a>
+  <nav><a href="#novidades">Novidades</a><a href="#jogo">O jogo</a><a href="#galeria">Galeria</a><a href="#apoie">Apoie</a><a href="#criador">Criador</a></nav>
+</header>
+
+<section id="topo" class="hero">
+  <div class="hero-text">
+    <p id="status" class="status"></p>
+    <h1>Ashem Vow</h1>
+    <p id="frase" class="frase"></p>
+    <div class="btns"><a class="btn red" href="#apoie">Apoiar o jogo</a><a class="btn" href="#novidades">Ver novidades</a></div>
+  </div>
+  <img class="hero-knight" src="assets/knight.svg" alt="Silhueta de um cavaleiro com uma espada gigante">
+</section>
+
+<main>
+  <section id="novidades"><h2>Novidades</h2><div id="news" class="news"></div></section>
+  <div class="ad" data-ad></div>
+  <section id="jogo"><h2>O jogo</h2><p id="sobre" class="lead"></p><div id="recursos" class="recursos"></div></section>
+  <section id="galeria"><h2>Galeria</h2><div id="galeria-itens" class="galeria"></div></section>
+  <section id="apoie" class="apoie">
+    <h2>Apoie Ashem Vow</h2>
+    <p class="lead">Seu apoio paga ferramentas, arte e tempo de desenvolvimento. Qualquer valor ajuda.</p>
+    <div class="apoie-grid">
+      <div class="box"><h3>Pix</h3><p>Chave (<span id="pix-tipo"></span>):</p><code id="pix-chave"></code><button id="copiar" class="btn red">Copiar chave</button><p id="copiado" class="ok" aria-live="polite"></p></div>
+      <div class="box"><h3>LivePix</h3><p>Doe com QR Code ou cartão:</p><iframe id="livepix" title="Doar via LivePix" loading="lazy"></iframe></div>
+    </div>
+  </section>
+  <div class="ad" data-ad></div>
+  <section id="criador"><h2>Criador</h2><div class="criador"><div><h3 id="c-nome"></h3><p id="c-bio"></p></div>
+    <div class="links"><a id="c-email" class="btn">E-mail</a><a id="c-insta" class="btn" target="_blank" rel="noopener">Instagram</a></div></div></section>
+</main>
+<footer><p>© <span id="ano"></span> Ashem Vow · feito por <span id="f-nome"></span>. Projeto independente de homenagem ao dark fantasy.</p></footer>
+<script src="content.js"></script><script src="app.js"></script>
+</body></html>
