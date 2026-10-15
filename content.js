@@ -16,17 +16,17 @@ window.SITE = {
     { data: "15/10/2026", titulo: "O site de Ashem Vow está no ar", texto: "Este é o ponto central para acompanhar o desenvolvimento, ver a arte e apoiar o projeto." },
     { data: "15/10/2026", titulo: "Esqueleto do jogo em construção", texto: "A base do projeto está pronta: movimento, câmera e estrutura das fases." }
   ],
-  GUS: [
+  PERSONAGEM: [
     { img: "assets/skinpadrao.png", legenda: "Juramento Carmesim" },
-    { img: "assets/skin2.png", legenda: "Voto das Sombras" },
-    { img: "assets/skin3.png", legenda: "Herdeiro da Ruína" }
+    { img: "assets/skin2.png", legenda: "Ruínas de Ashem" },
+    { img: "assets/skin3.png", legenda: "A lâmina quebrada" }
   ],
   criador: {
     nome: "Teecki",
     bio: "Desenvolvedor independente criando Ashem Vow do zero, sozinho. Cada apoio ajuda a transformar o esqueleto em jogo.",
     email: "tcioficial81@gmail.com"
   },
-  instagram: "https://www.instagram.com/SEU_USUARIO",   // troque SEU_USUARIO
+  instagram: "https://www.instagram.com/ASHEMVOW",   // troque SEU_USUARIO
   pix: { chave: "luam.fabiooo@gmail.com", tipo: "E-mail" },
   livepix: "https://widget.livepix.gg/embed/a1b0d7d2-c4c8-4188-8626-e40d5bfd5896",
   /* Anúncios: preencha com os dados do Google AdSense quando aprovado.
