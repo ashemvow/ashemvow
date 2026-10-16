@@ -8,11 +8,15 @@ $("recursos").append(...S.recursos.map(r => el("div", "", `<h3>${esc(r.t)}</h3><
 
 const lb = el("div"); lb.id = "lb"; lb.innerHTML = "<img alt=''>"; document.body.append(lb);
 lb.onclick = () => lb.classList.remove("on");
-$("galeria-itens").append(...S.galeria.map(g => {
-  const f = el("figure", "", `<img src="${esc(g.img)}" alt="${esc(g.legenda)}" loading="lazy"><figcaption>${esc(g.legenda)}</figcaption>`);
+const card = g => {
+  const f = el("figure", "", `<img src="${esc(g.img)}" alt="${esc(g.legenda)}" loading="lazy"><figcaption>${g.data ? `<time>${esc(g.data)}</time>` : ""}${esc(g.legenda)}</figcaption>`);
   f.onclick = () => { lb.querySelector("img").src = g.img; lb.classList.add("on"); };
   return f;
-}));
+};
+addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("on"); });
+$("galeria-itens").append(...S.galeria.map(card));
+$("projeto-intro").textContent = S.projeto.intro;
+$("projeto-itens").append(...(S.projeto.itens.length ? S.projeto.itens.map(card) : [el("p", "lead", "Fotos do projeto em breve.")]));
 
 $("pix-tipo").textContent = S.pix.tipo; $("pix-chave").textContent = S.pix.chave;
 $("livepix").src = S.livepix;
