@@ -3,7 +3,11 @@ const el = (t, c, h) => { const e = document.createElement(t); if (c) e.classNam
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 $("status").textContent = S.status; $("frase").textContent = S.frase; $("sobre").textContent = S.sobre;
-$("news").append(...S.novidades.map(n => el("article", "", `<time>${esc(n.data)}</time><h3>${esc(n.titulo)}</h3><p>${esc(n.texto)}</p>`)));
+const mkNews = n => el("article", "reveal", `<time>${esc(n.data)}</time><h3>${esc(n.titulo)}</h3><p>${esc(n.texto)}</p>`);
+const SHOW = 5, nb = $("news"), nm = $("news-more");
+nb.append(...S.novidades.slice(0, SHOW).map(mkNews));
+if (S.novidades.length > SHOW) { nm.hidden = false; nm.onclick = () => { nb.append(...S.novidades.slice(SHOW).map(mkNews)); nm.hidden = true; observe(); }; }
+$("stats").append(...[[S.personagens.length,"heróis"],[S.cenarios.length,"cenários"],[S.criaturas.length*10,"criaturas"],[8,"poções"]].map(([n,t]) => el("li","",`<b>${n}</b><span>${t}</span>`)));
 $("andamento-itens").append(...S.andamento.map(g => el("div", "", `<h3>${esc(g.titulo)}</h3><ul>${g.itens.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`)));
 $("recursos").append(...S.recursos.map(r => el("div", "", `<h3>${esc(r.t)}</h3><p>${esc(r.d)}</p>`)));
 
@@ -75,3 +79,23 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
     requestAnimationFrame(t);
   })();
 }
+
+/* Veja o jogo: carrossel de prints */
+const pr = (S.projeto.itens || []).filter(i => /print-jogo|print-herois|print-preparar|print-loja|print-diario/.test(i.img));
+$("prints").append(...pr.map(i => { const f = el("figure", "", `<img src="${esc(i.img)}" alt="${esc(i.legenda)}" loading="lazy"><figcaption>${esc(i.legenda)}</figcaption>`); f.onclick = () => zoom(i.img); return f; }));
+
+/* Menu móvel, barra de progresso, link ativo e revelar ao rolar */
+const menu = $("menu"), links = $("links");
+menu.onclick = () => { const o = links.classList.toggle("open"); menu.setAttribute("aria-expanded", o); };
+links.onclick = e => { if (e.target.tagName === "A") { links.classList.remove("open"); menu.setAttribute("aria-expanded", false); } };
+const prog = $("progress");
+addEventListener("scroll", () => { const h = document.documentElement; prog.style.transform = `scaleX(${h.scrollTop / (h.scrollHeight - h.clientHeight || 1)})`; $("nav").classList.toggle("solid", h.scrollTop > 30); }, { passive: true });
+const secs = [...document.querySelectorAll("main section[id]")];
+const spy = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.querySelectorAll("a").forEach(l => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
+secs.forEach(s => spy.observe(s));
+let io;
+function observe() {
+  if (!io) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .08 });
+  document.querySelectorAll(".reveal:not(.in), .sec, .recursos > div, .heroi, .andamento > div, .box, .criador").forEach(x => { x.classList.add("reveal"); io.observe(x); });
+}
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) document.querySelectorAll("body").forEach(() => document.documentElement.classList.add("calm")); else observe();

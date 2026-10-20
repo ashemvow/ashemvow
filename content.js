@@ -77,8 +77,6 @@ window.SITE = {
       {"data": "20/10/2026", "img": "assets/print-loja.webp", "legenda": "Loja"},
       {"data": "20/10/2026", "img": "assets/print-diario.webp", "legenda": "Recompensa diária"},
       {"data": "20/10/2026", "img": "assets/print-novidades.webp", "legenda": "Aba de novidades dentro do jogo"},
-      {"data": "20/10/2026", "img": "assets/cena1_1.webp", "legenda": "Cena de abertura (arte de cutscene)"},
-      {"data": "20/10/2026", "img": "assets/cena2_1.webp", "legenda": "Cena da Floresta Morta (arte de cutscene)"},
       { data: "17/10/2026", img: "assets/loja-conceito.webp", legenda: "Conceito da nova loja (os textos e as skins ainda vão mudar)" },
       { data: "17/10/2026", img: "assets/ficha-animacoes.webp", legenda: "Folha de animações do herói, versão de trabalho" },
       { data: "17/10/2026", img: "assets/bestiario-campo.webp", legenda: "Bestiário do Campo de Cinzas, versão de trabalho" },
