@@ -4,6 +4,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 
 $("status").textContent = S.status; $("frase").textContent = S.frase; $("sobre").textContent = S.sobre;
 $("news").append(...S.novidades.map(n => el("article", "", `<time>${esc(n.data)}</time><h3>${esc(n.titulo)}</h3><p>${esc(n.texto)}</p>`)));
+$("andamento-itens").append(...S.andamento.map(g => el("div", "", `<h3>${esc(g.titulo)}</h3><ul>${g.itens.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`)));
 $("recursos").append(...S.recursos.map(r => el("div", "", `<h3>${esc(r.t)}</h3><p>${esc(r.d)}</p>`)));
 
 const lb = el("div"); lb.id = "lb"; lb.innerHTML = "<img alt=''>"; document.body.append(lb);
@@ -14,6 +15,25 @@ const card = g => {
   return f;
 };
 addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("on"); });
+const zoom = src => { lb.querySelector("img").src = src; lb.classList.add("on"); };
+$("personagens-itens").append(...S.personagens.map(p => {
+  const d = el("article", "heroi", `<img class="hp" src="${esc(p.skins[0].img)}" alt="${esc(p.nome)}, ${esc(p.titulo)}" loading="lazy"><div><h3>${esc(p.nome)}</h3><p class="tit">${esc(p.titulo)}</p><p><b>${esc(p.habilidade)}.</b> ${esc(p.descricao)}</p><div class="skins"></div></div>`);
+  const main = d.querySelector(".hp"), box = d.querySelector(".skins");
+  p.skins.forEach((s, i) => {
+    const b = el("button", i ? "" : "on", `<img src="${esc(s.img)}" alt="" loading="lazy"><span>${esc(s.nome)}</span>`);
+    b.onclick = () => { main.src = s.img; box.querySelectorAll("button").forEach(x => x.classList.remove("on")); b.classList.add("on"); };
+    box.append(b);
+  });
+  main.onclick = () => zoom(main.src);
+  return d;
+}));
+const abas = (idAbas, idBox, lista, render) => {
+  const ab = $(idAbas), bx = $(idBox);
+  lista.forEach((f, i) => { const b = el("button", i ? "" : "on", esc(f.fase)); b.onclick = () => { ab.querySelectorAll("button").forEach(x => x.classList.remove("on")); b.classList.add("on"); bx.replaceChildren(...render(f)); }; ab.append(b); });
+  bx.replaceChildren(...render(lista[0]));
+};
+abas("criaturas-abas", "criaturas-itens", S.criaturas, f => f.criaturas.map(c => { const e = el("figure", "", `<img src="${esc(c.img)}" alt="${esc(c.nome)}" loading="lazy"><figcaption>${esc(c.nome)}</figcaption>`); e.onclick = () => zoom(c.img); return e; }));
+abas("cenarios-abas", "cenarios-itens", S.cenarios, f => [el("figure", "chao", `<img src="${esc(f.chao)}" alt="Chão de ${esc(f.fase)}" loading="lazy"><figcaption>Chão</figcaption>`), ...f.objetos.map(o => { const e = el("figure", "", `<img src="${esc(o)}" alt="Objeto de cenário" loading="lazy">`); e.onclick = () => zoom(o); return e; })]);
 $("galeria-itens").append(...S.galeria.map(card));
 $("projeto-intro").textContent = S.projeto.intro;
 $("projeto-itens").append(...(S.projeto.itens.length ? S.projeto.itens.map(card) : [el("p", "lead", "Fotos do projeto em breve.")]));
