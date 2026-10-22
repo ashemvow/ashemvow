@@ -22,3 +22,11 @@ Em `content.js`, o bloco `andamento` tem 3 colunas (já no teste, em produção,
 
 ## novidades.txt
 O jogo lê `novidades.txt` (na raiz do site) na aba Novidades. Edite esse arquivo para atualizar o texto dentro do jogo sem lançar nova versão. Mantenha texto simples.
+
+## Anúncios (Google AdSense)
+1. Crie conta em adsense.google.com com o endereço do site e aguarde a aprovação.
+2. Em `content.js`, preencha `anuncios.client` (ex.: `ca-pub-1234567890123456`). Com isso o código do AdSense passa a carregar (anúncios automáticos).
+3. Para blocos fixos, crie uma unidade "Display" no AdSense e cole o número em `anuncios.slot`.
+4. Crie o arquivo `ads.txt` na raiz com: `google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0`
+5. No AdSense, ative a mensagem de consentimento em Privacidade e mensagens (exigido para visitantes do Brasil/UE).
+Sem `client`, nenhum espaço de anúncio aparece. A página `privacidade.html` já está pronta e linkada no rodapé.

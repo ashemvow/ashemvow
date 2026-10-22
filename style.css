@@ -75,9 +75,10 @@ h3{font-size:1.65rem}
 .recursos h3{color:var(--gold);margin-bottom:.3rem}.recursos p{color:var(--mut)}
 
 /* prints */
-.prints{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.2rem;scrollbar-color:var(--blood) var(--iron)}
+.prints{display:flex;align-items:flex-start;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.2rem;scrollbar-color:var(--blood) var(--iron)}
 .prints figure{flex:0 0 230px;scroll-snap-align:start;background:#000;border:1px solid #4a3a30;border-radius:22px;padding:7px;cursor:zoom-in;box-shadow:0 14px 40px rgba(0,0,0,.6);transition:.3s}
 .prints figure:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.7),0 0 36px rgba(155,28,31,.3)}
+.prints figure.land{flex-basis:430px}
 .prints img{width:100%;display:block;border-radius:16px}
 .prints figcaption{font-size:.82rem;color:var(--mut);padding:.5rem .3rem .2rem;line-height:1.3}
 
