@@ -60,7 +60,7 @@ document.querySelectorAll("[data-ad]").forEach(d => {
     d.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${esc(AD.client)}" data-ad-slot="${esc(AD.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
   } else d.hidden = true;   // sem anúncio configurado: não mostra espaço vazio
 });
-if (AD.client) {
+if (AD.client && !document.querySelector('script[src*="adsbygoogle.js"]')) {
   const s = el("script"); s.async = true; s.crossOrigin = "anonymous";
   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + AD.client;
   document.head.append(s);
