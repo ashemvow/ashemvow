@@ -66,7 +66,7 @@ window.SITE = {
   projeto: {
     intro: "Prints do jogo, folhas de arte e conceitos de Ashem Vow. Tudo em andamento e sujeito a mudanças.",
     itens: [
-      {"data": "20/10/2026", "img": "assets/print-jogo_garrick.webp", "legenda": "Garrick no Campo de Cinzas: Aura de Brasas"},
+      {"data": "20/10/2026", "img": "assets/print-jogo_garrick.webp", "legenda": "Garrick no Campo de Cinzas (jogo na horizontal, com botões de habilidade)"},
       {"data": "20/10/2026", "img": "assets/print-jogo_yurinn.webp", "legenda": "Yurinn na Floresta Morta: Fios de Brasa"},
       {"data": "20/10/2026", "img": "assets/print-jogo_brann.webp", "legenda": "Brann na Catedral em Ruínas"},
       {"data": "20/10/2026", "img": "assets/print-jogo_selka.webp", "legenda": "Selka no Pântano de Sangue"},

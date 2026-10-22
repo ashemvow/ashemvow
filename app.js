@@ -53,17 +53,18 @@ $("c-nome").textContent = S.criador.nome; $("c-bio").textContent = S.criador.bio
 $("c-email").href = "mailto:" + S.criador.email; $("c-email").textContent = S.criador.email;
 $("c-insta").href = S.instagram; $("ano").textContent = new Date().getFullYear();
 
-/* Anúncios */
+/* Anúncios (Google AdSense): só aparecem quando "client" estiver preenchido em content.js */
+const AD = S.anuncios || {};
 document.querySelectorAll("[data-ad]").forEach(d => {
-  if (S.anuncios.client && S.anuncios.slot) {
-    d.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${esc(S.anuncios.client)}" data-ad-slot="${esc(S.anuncios.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
-  } else d.innerHTML = '<div class="slot">Espaço publicitário</div>';
+  if (AD.client && AD.slot) {
+    d.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${esc(AD.client)}" data-ad-slot="${esc(AD.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
+  } else d.hidden = true;   // sem anúncio configurado: não mostra espaço vazio
 });
-if (S.anuncios.client && S.anuncios.slot) {
+if (AD.client) {
   const s = el("script"); s.async = true; s.crossOrigin = "anonymous";
-  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + S.anuncios.client;
+  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + AD.client;
   document.head.append(s);
-  s.onload = () => document.querySelectorAll(".adsbygoogle").forEach(() => (window.adsbygoogle = window.adsbygoogle || []).push({}));
+  if (AD.slot) s.onload = () => document.querySelectorAll(".adsbygoogle").forEach(() => (window.adsbygoogle = window.adsbygoogle || []).push({}));
 }
 
 /* Brasas */
@@ -82,7 +83,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 
 /* Veja o jogo: carrossel de prints */
 const pr = (S.projeto.itens || []).filter(i => /print-jogo|print-herois|print-preparar|print-loja|print-diario/.test(i.img));
-$("prints").append(...pr.map(i => { const f = el("figure", "", `<img src="${esc(i.img)}" alt="${esc(i.legenda)}" loading="lazy"><figcaption>${esc(i.legenda)}</figcaption>`); f.onclick = () => zoom(i.img); return f; }));
+$("prints").append(...pr.map(i => { const f = el("figure", "", `<img src="${esc(i.img)}" alt="${esc(i.legenda)}" loading="lazy"><figcaption>${esc(i.legenda)}</figcaption>`); f.onclick = () => zoom(i.img); const im = f.querySelector("img"); im.onload = () => { if (im.naturalWidth > im.naturalHeight) f.classList.add("land"); }; return f; }));
 
 /* Menu móvel, barra de progresso, link ativo e revelar ao rolar */
 const menu = $("menu"), links = $("links");
