@@ -60,28 +60,33 @@ window.SITE = {
   /* Galeria de artes. Imagens ficam na pasta assets */
   galeria: [
     { img: "assets/logo-ashem-vow.webp", legenda: "Juramento de Cinzas sob a Lua Rubra" },
-    { img: "assets/triptico-guerreiro.webp", legenda: "Tríptico do Guerreiro: variações vermelha, azul e roxa" }
+    { img: "assets/ficha-garrick.webp", legenda: "Ficha oficial, Garrick: Warden of Ashes" },
+    { img: "assets/ficha-yurinn.webp", legenda: "Ficha oficial, Yurinn: Ember Weaver" },
+    { img: "assets/ficha-brann.webp", legenda: "Ficha oficial, Brann: Sentinel of the Pale Light" },
+    { img: "assets/ficha-selka.webp", legenda: "Ficha oficial, Selka: Shadow Dancer" },
+    { img: "assets/ficha-orun.webp", legenda: "Ficha oficial, Orun: Gravedigger of Souls" }
   ],
+
   /* Seção "Do projeto": fotos e prints do desenvolvimento.
      Para adicionar: envie a imagem para assets/ e copie uma linha abaixo (a mais nova no topo). */
   projeto: {
     intro: "Prints do jogo, folhas de arte e conceitos de Ashem Vow. Tudo em andamento e sujeito a mudanças.",
     itens: [
-      {"data": "20/10/2026", "img": "assets/print-jogo_garrick.webp", "legenda": "Garrick no Campo de Cinzas (jogo na horizontal, com botões de habilidade)"},
-      {"data": "20/10/2026", "img": "assets/print-jogo_yurinn.webp", "legenda": "Yurinn na Floresta Morta: Fios de Brasa"},
-      {"data": "20/10/2026", "img": "assets/print-jogo_brann.webp", "legenda": "Brann na Catedral em Ruínas"},
-      {"data": "20/10/2026", "img": "assets/print-jogo_selka.webp", "legenda": "Selka no Pântano de Sangue"},
-      {"data": "20/10/2026", "img": "assets/print-jogo_orun.webp", "legenda": "Orun na Geleira dos Esquecidos"},
-      {"data": "20/10/2026", "img": "assets/print-home.webp", "legenda": "Tela inicial"},
-      {"data": "20/10/2026", "img": "assets/print-preparar.webp", "legenda": "Preparar partida: fase e poções"},
-      {"data": "20/10/2026", "img": "assets/print-loja.webp", "legenda": "Loja"},
-      {"data": "20/10/2026", "img": "assets/print-diario.webp", "legenda": "Recompensa diária"},
-      {"data": "20/10/2026", "img": "assets/print-novidades.webp", "legenda": "Aba de novidades dentro do jogo"},
-      { data: "17/10/2026", img: "assets/loja-conceito.webp", legenda: "Conceito da nova loja (os textos e as skins ainda vão mudar)" },
-      { data: "17/10/2026", img: "assets/ficha-animacoes.webp", legenda: "Folha de animações do herói, versão de trabalho" },
+      {"data": "23/10/2026", "img": "assets/print-jogo_garrick.webp", "legenda": "Garrick no Campo de Cinzas, com botões de habilidade"},
+      {"data": "23/10/2026", "img": "assets/print-jogo_yurinn.webp", "legenda": "Yurinn na Floresta Morta"},
+      {"data": "23/10/2026", "img": "assets/print-jogo_brann.webp", "legenda": "Brann na Catedral em Ruínas"},
+      {"data": "23/10/2026", "img": "assets/print-jogo_selka.webp", "legenda": "Selka no Pântano de Sangue"},
+      {"data": "23/10/2026", "img": "assets/print-jogo_orun.webp", "legenda": "Orun na Geleira dos Esquecidos"},
+      {"data": "23/10/2026", "img": "assets/print-home.webp", "legenda": "Tela inicial"},
+      {"data": "23/10/2026", "img": "assets/print-herois.webp", "legenda": "Escolha de heróis"},
+      {"data": "23/10/2026", "img": "assets/print-perfil.webp", "legenda": "Perfil do jogador"},
+      {"data": "23/10/2026", "img": "assets/print-banner.webp", "legenda": "Escolha do banner do perfil"},
+      {"data": "23/10/2026", "img": "assets/print-preparar.webp", "legenda": "Preparar partida: fase e poções"},
+      {"data": "23/10/2026", "img": "assets/print-loja.webp", "legenda": "Loja"},
+      {"data": "23/10/2026", "img": "assets/print-diario.webp", "legenda": "Recompensa diária"},
+      {"data": "23/10/2026", "img": "assets/print-novidades.webp", "legenda": "Aba de novidades dentro do jogo"},
       { data: "17/10/2026", img: "assets/bestiario-campo.webp", legenda: "Bestiário do Campo de Cinzas, versão de trabalho" },
-      { data: "16/10/2026", img: "assets/bestiario.webp", legenda: "Bestiário de monstros terrestres e voadores" },
-      { data: "16/10/2026", img: "assets/ficha-guardiao.webp", legenda: "Ficha do personagem: Guardião das Cinzas" }
+      { data: "16/10/2026", img: "assets/bestiario.webp", legenda: "Bestiário de monstros terrestres e voadores" }
     ]
   },
   /* Personagens, criaturas e cenários: gerados a partir do jogo. Imagens em assets/ */
