@@ -5,8 +5,11 @@ VERSÃO 6 · A ATUALIZAÇÃO DAS CINZAS
 NOVO: 5 HERÓIS
 Garrick (Guardião das Cinzas), Yurinn (Tecelã de Brasas), Brann (Sentinela do Selo), Selka (Lâmina Errante) e Orun (O Coveiro). Cada um tem animações próprias e uma habilidade única: Aura de Brasas, Fios de Brasa, Pilares de Luz, Tempestade de Lâminas e Almas Ligadas.
 
-NOVO: 3 SKINS POR HERÓI
-Uma skin grátis e duas skins exclusivas. São só visuais — ninguém fica mais forte por pagar.
+NOVO: ARTE REFEITA DOS HERÓIS
+Os 5 heróis ganharam animações novas de parado, corrida e ataque, com a arte das fichas oficiais. Armas e chapéus não são mais cortados. Os retratos e avatares também foram trocados pelos das fichas.
+
+NOVO: BANNER DO PERFIL
+Toque no seu perfil para escolher o banner. Já estão disponíveis o banner do Garrick e os banners padrão. Os banners dos outros heróis chegam em breve.
 
 NOVO: 6 FASES
 Campo de Cinzas, Floresta Morta, Catedral em Ruínas, Pântano de Sangue, Geleira dos Esquecidos e Abismo de Brasas. Cada uma com cenário, música, 10 inimigos e um chefe próprios.
@@ -21,10 +24,10 @@ NOVO: RECOMPENSA DIÁRIA
 7 dias de prêmios. Se você faltar um dia, a sequência só pausa — não volta ao início.
 
 NOVO: LOJA
-Skins, pacotes de cinzas, poções e skins de espada. Anúncios são sempre opcionais, e existe a opção de removê-los.
+Heróis, pacotes de cinzas, poções e itens extras. Por enquanto cada herói tem só o visual original, e novos heróis chegam em breve. Anúncios são sempre opcionais, e existe a opção de removê-los.
 
 MELHORIAS
-Heróis maiores e mais detalhados, trilha sonora e vozes novas, efeitos sonoros por inimigo, cenários com objetos espalhados e opções de volume separadas para música, efeitos e vozes.
+Ícones das habilidades nos botões, correção de um erro ao abrir saves antigos, trilha sonora e vozes novas, efeitos sonoros por inimigo, cenários com objetos espalhados e opções de volume separadas para música, efeitos e vozes.
 
 EM BREVE
 Códigos de resgate com recompensas exclusivas, perfil de jogador e ranking global.

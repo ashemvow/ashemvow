@@ -21,13 +21,10 @@ const card = g => {
 addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("on"); });
 const zoom = src => { lb.querySelector("img").src = src; lb.classList.add("on"); };
 $("personagens-itens").append(...S.personagens.map(p => {
-  const d = el("article", "heroi", `<img class="hp" src="${esc(p.skins[0].img)}" alt="${esc(p.nome)}, ${esc(p.titulo)}" loading="lazy"><div><h3>${esc(p.nome)}</h3><p class="tit">${esc(p.titulo)}</p><p><b>${esc(p.habilidade)}.</b> ${esc(p.descricao)}</p><div class="skins"></div></div>`);
-  const main = d.querySelector(".hp"), box = d.querySelector(".skins");
-  p.skins.forEach((s, i) => {
-    const b = el("button", i ? "" : "on", `<img src="${esc(s.img)}" alt="" loading="lazy"><span>${esc(s.nome)}</span>`);
-    b.onclick = () => { main.src = s.img; box.querySelectorAll("button").forEach(x => x.classList.remove("on")); b.classList.add("on"); };
-    box.append(b);
-  });
+  const d = el("article", "heroi", `<img class="hp" src="${esc(p.skins[0].img)}" alt="${esc(p.nome)}, ${esc(p.titulo)}" loading="lazy"><div><h3>${esc(p.nome)}</h3><p class="tit">${esc(p.titulo)}</p><p><b>${esc(p.habilidade)}.</b> ${esc(p.descricao)}</p><div class="hab"></div><img class="bnr" src="${esc(p.banner)}" alt="Banner de ${esc(p.nome)}" loading="lazy"></div>`);
+  const main = d.querySelector(".hp");
+  d.querySelector(".hab").append(...p.habilidades.map(s => { const b = el("button", "", `<img src="${esc(s.img)}" alt="${esc(s.nome)}" loading="lazy"><span>${esc(s.nome)}</span>`); b.onclick = () => zoom(s.img); return b; }));
+  const bn = d.querySelector(".bnr"); bn.onclick = () => zoom(p.banner);
   main.onclick = () => zoom(main.src);
   return d;
 }));
@@ -53,18 +50,18 @@ $("c-nome").textContent = S.criador.nome; $("c-bio").textContent = S.criador.bio
 $("c-email").href = "mailto:" + S.criador.email; $("c-email").textContent = S.criador.email;
 $("c-insta").href = S.instagram; $("ano").textContent = new Date().getFullYear();
 
-/* Anúncios (Google AdSense): só aparecem quando "client" estiver preenchido em content.js */
+/* Anúncios (Google AdSense): blocos fixos. O código do AdSense está no <head>; aqui só ligamos os blocos quando "slot" estiver preenchido em content.js */
 const AD = S.anuncios || {};
 document.querySelectorAll("[data-ad]").forEach(d => {
   if (AD.client && AD.slot) {
     d.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${esc(AD.client)}" data-ad-slot="${esc(AD.slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
-  } else d.hidden = true;   // sem anúncio configurado: não mostra espaço vazio
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+  } else d.hidden = true;   // sem bloco configurado: não mostra espaço vazio
 });
 if (AD.client && !document.querySelector('script[src*="adsbygoogle.js"]')) {
   const s = el("script"); s.async = true; s.crossOrigin = "anonymous";
   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + AD.client;
   document.head.append(s);
-  if (AD.slot) s.onload = () => document.querySelectorAll(".adsbygoogle").forEach(() => (window.adsbygoogle = window.adsbygoogle || []).push({}));
 }
 
 /* Brasas */
