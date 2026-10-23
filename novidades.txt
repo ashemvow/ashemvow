@@ -1,9 +1,44 @@
+VERSÃO 7 · PASSE, ROLETA E FRAGMENTOS
+
+NOVO: ROLETA DA CATEDRAL
+1 giro grátis por dia e até 3 giros extras assistindo a um vídeo. Prêmios: cinzas, poções, fragmentos de vitral e uma promoção relâmpago do Sombras das Cinzas por R$ 1,99 durante 24 horas.
+
+NOVO: FRAGMENTOS DE VITRAL
+Uma moeda rara que cai de elites e chefes. Junto com 1200 cinzas, 40 fragmentos liberam um herói. Também dá para comprar com dinheiro real.
+
+NOVO: DOIS HERÓIS EXCLUSIVOS DO PASSE
+Irmão Brasa (Monge do Machado), no nível 15, e Vesper (Cantora do Sino Negro), no nível 30 do Passe Premium.
+
+NOVO: BANNERS DE HERÓI
+Na Loja e no Passe, toque no herói para ver a foto, os atributos e as 3 habilidades antes de comprar ou resgatar.
+
+NOVO: TÍTULOS E MOLDURAS
+Os títulos do Passe só são liberados ao atingir a meta de abates com o herói dele. As molduras enquadram o herói que você escolheu.
+
+NOVO: PASSE DE CATEDRAL
+Temporada 1 com 30 níveis. Cada partida rende XP do passe e cada nível libera recompensas. A trilha grátis dá cinzas, poções e títulos. O Passe Premium libera ainda molduras de perfil de cada herói, títulos exclusivos, poções raras e muito mais cinzas. Quem comprar depois recebe tudo dos níveis já alcançados.
+
+NOVO: ARMAS E EVOLUÇÕES
+Cada herói começa com uma arma própria que ataca sozinha e ganha mais 6 armas para coletar (chamas, cinzas, correntes, aura, relâmpagos, almas e corvos). Cada uma sobe até o nível 8 e, junto do item certo, evolui para uma versão lendária ao abrir o baú de um chefe ou de um inimigo de elite.
+
+NOVO: ITENS PASSIVOS
+8 itens que ficam com você na partida: armadura, coração de brasa, botas, relíquia, selo, olho, ímã e sede de almas.
+
+NOVO: ONDAS, ELITES E ITENS NO CHÃO
+Cercos e hordas surgem de tempos em tempos, inimigos de elite dourados deixam baús, e o chão passa a ter cálices de cura, ímãs de almas, bombas de cinzas e moedas de cinza. A partida agora dura 15 minutos.
+
 ASHEM VOW — NOVIDADES
 
 VERSÃO 6 · A ATUALIZAÇÃO DAS CINZAS
 
 NOVO: 5 HERÓIS
 Garrick (Guardião das Cinzas), Yurinn (Tecelã de Brasas), Brann (Sentinela da Luz Pálida), Selka (Dançarina das Sombras) e Orun (Coveiro das Almas). Cada um tem animações próprias e uma habilidade única: Aura de Brasas, Fios de Brasa, Pilares de Luz, Tempestade de Lâminas e Almas Ligadas.
+
+NOVO: HABILIDADES EXCLUSIVAS
+Cada herói agora tem as 3 habilidades só dele, sem efeitos repetidos. Selka ganhou a Corrente Voadora (raio que salta entre inimigos), Brann o Julgamento (cruz de luz que atordoa), Orun a Mão do Coveiro (puxa os inimigos para o centro) e a Procissão dos Mortos (onda de espíritos), e Garrick o Eclipse de Cinzas (escurece a tela e deixa o chão em chamas). O Sombras das Cinzas só lança bolas de fogo: Bola de Fogo, Rajada de Chamas e Chuva de Meteoros.
+
+NOVO: ANIMAÇÃO DE MORTE
+Todos os heróis agora caem de verdade quando são derrotados, com a animação de morte desenhada. A Yurinn se desfaz em brasas rosa.
 
 NOVO: ARTE REFEITA DOS HERÓIS
 Os 5 heróis ganharam animações novas de parado, corrida e ataque, com a arte das fichas oficiais. Armas e chapéus não são mais cortados. Os retratos e avatares também foram trocados pelos das fichas.
